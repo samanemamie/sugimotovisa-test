@@ -8,6 +8,7 @@ import ResetCart from "@/components/product/ResetCart";
 
 //
 import { StateProps, StoreProduct } from "../../../type";
+import { Button } from "@/components/ui/button";
 
 const CartPage = () => {
   const { productData } = useSelector((state: StateProps) => state.next);
@@ -42,9 +43,9 @@ const CartPage = () => {
         <div className="bg-white h-64  flex flex-col items-center justify-center py-5 rounded-lg shadow-lg">
           <h1 className="text-lg font-medium">Your cart is empty!</h1>
           <Link href={"/"}>
-            <button className="w-52 h-10 bg-amazon_blue text-white rounded-lg text-sm font-semibold hover:bg-amazon_yellow hover:text-black">
+            <Button className="w-52 h-10 bg-amazon_blue text-white rounded-lg text-sm font-semibold hover:bg-amazon_yellow hover:text-black">
               go to shopping
-            </button>
+            </Button>
           </Link>
         </div>
       )}

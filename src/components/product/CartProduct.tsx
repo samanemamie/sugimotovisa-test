@@ -97,8 +97,6 @@ const CartProduct = ({ item }: cartProductsProps) => {
           </div>
           <div className="flex flex-col md:flex-row items-start gap-3 mt-2">
             {colorOptions.map((option, index) => {
-              console.log(option, "option");
-              console.log(item.color, "item");
               return (
                 <div
                   key={index}
