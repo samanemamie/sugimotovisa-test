@@ -16,6 +16,7 @@ const CartPage = () => {
   return (
     <div className="max-w-screen-2xl mx-auto  py-4">
       {productData.length > 0 ? (
+        //  This section is for checking the presence or absence of data in the shopping cart
         <>
           <div className="bg-white  py-5 rounded-lg">
             <div className="flex items-center justify-between border-b-[1px] border-b-gray-400 pb-1">
@@ -35,11 +36,13 @@ const CartPage = () => {
                   <CartProduct item={item} />
                 </div>
               ))}
+              {/* Using this component, you can completely delete the shopping cart */}
               <ResetCart />
             </div>
           </div>
         </>
       ) : (
+        // This section is the lack of data in the shopping cart
         <div className="bg-white h-64  flex flex-col items-center justify-center py-5 rounded-lg shadow-lg">
           <h1 className="text-lg font-medium">Your cart is empty!</h1>
           <Link href={"/"}>

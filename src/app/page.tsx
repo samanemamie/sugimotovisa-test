@@ -11,8 +11,10 @@ export default async function Home() {
   return (
     <main>
       <div className="">
+        {/* In the banner section, photos are received statically from the assets folder */}
         <Banner />
         <div className="relative md:-mt-20 lg:-mt-32 xl:-mt-60 z-20 mb-10">
+          {/* The data of the Products component is received from a fake api */}
           <Products productData={productData} />
         </div>
       </div>

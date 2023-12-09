@@ -59,6 +59,7 @@ const CartProduct = ({ item }: cartProductsProps) => {
             </span>
           </p>
           <div className="flex items-center gap-6">
+            {/* In this section, the number of products is added or reduced */}
             <div className="flex items-center mt-1 justify-between border border-gray-300 px-4 py-1 rounded-full w-28 shadow-lg shadow-gray-300">
               <span
                 onClick={() =>
@@ -88,6 +89,7 @@ const CartProduct = ({ item }: cartProductsProps) => {
                 <LuMinus />
               </span>
             </div>
+            {/* In this section, you can remove the product from the shopping cart */}
             <div
               onClick={() => dispatch(deleteProduct(item._id))}
               className="flex items-center text-sm font-medium text-gray-400 hover:text-red-600 cursor-pointer duration-300"
@@ -95,6 +97,7 @@ const CartProduct = ({ item }: cartProductsProps) => {
               <IoMdClose className="mt-[2px]" /> <p>remove</p>
             </div>
           </div>
+          {/* In this section, you can choose the color of the product */}
           <div className="flex flex-col md:flex-row items-start gap-3 mt-2">
             {colorOptions.map((option, index) => {
               return (

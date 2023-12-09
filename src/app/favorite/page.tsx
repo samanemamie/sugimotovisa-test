@@ -16,6 +16,7 @@ const FavoritePage = () => {
   return (
     <div className="max-w-screen-2xl mx-auto  py-4">
       {favoriteData.length > 0 ? (
+        // This section is for checking the presence or absence of data in the favorites section
         <div className="bg-white p-4 rounded-lg">
           <div className="flex items-center justify-between border-b-[1px] border-b-gray-400 pb-1">
             <p className="text-2xl font-semibold text-amazon_blue">
@@ -31,10 +32,12 @@ const FavoritePage = () => {
                 <FavoriteProduct item={item} />
               </div>
             ))}
+            {/* Using this component, you can completely delete favorites */}
             <ResetFavoriteItems />
           </div>
         </div>
       ) : (
+        // This section is for the lack of data in the favorites section
         <div className="bg-white h-96  flex flex-col items-center justify-center py-5 rounded-lg shadow-lg">
           <h1>Nothing is available in the Favorite list</h1>
           <Link href="/">

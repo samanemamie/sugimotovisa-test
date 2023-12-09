@@ -58,9 +58,10 @@ const Products = ({ productData }: Props) => {
               className="w-full bg-white text-black p-4 border border-gray-300 rounded-lg group overflow-hidden"
             >
               <div className="w-full h-[260px] relative">
+                {/* In this section, by clicking on the picture, the data will be sent to the page /product/${_id} (SingleProduct) through query. */}
                 <Link
                   href={{
-                    pathname: `/${_id}`,
+                    pathname: `/product/${_id}`,
                     query: {
                       _id: _id,
                       brand: brand,
@@ -83,6 +84,7 @@ const Products = ({ productData }: Props) => {
                   />
                 </Link>
                 <div className="w-12 h-24 absolute bottom-10 right-0 border-[1px] border-gray-400 bg-white rounded-md flex flex-col translate-x-20 group-hover:translate-x-0 transition-transform duration-300">
+                  {/* In this section, by clicking on the shopping cart icon, the data is saved in redux and added to the shopping cart in real time. */}
                   <span
                     onClick={() =>
                       dispatch(
@@ -113,6 +115,7 @@ const Products = ({ productData }: Props) => {
                       </div>
                     )}
                   </span>
+                  {/* In this section, by clicking on the favorites icon, the data will be saved in redux and will be added to the favorites in real time and deleted by clicking again. */}
                   <span
                     onClick={() =>
                       dispatch(
@@ -180,7 +183,7 @@ const Products = ({ productData }: Props) => {
                   }
                   className=" mt-2 "
                 >
-                  add to cart
+                  {isProductCard ? "Added" : "add to cart"}
                 </Button>
               </div>
             </div>

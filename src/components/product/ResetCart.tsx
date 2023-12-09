@@ -1,7 +1,7 @@
 import { resetCart } from "@/store/nextSlice";
 import { useDispatch } from "react-redux";
 import { Button } from "../ui/button";
-
+// Using this component, you can completely delete the shopping cart
 const ResetCart = () => {
   const dispatch = useDispatch();
   const handleResetCart = () => {

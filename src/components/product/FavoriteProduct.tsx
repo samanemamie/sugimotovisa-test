@@ -37,6 +37,7 @@ const FavoriteProduct = ({ item }: cartProductProps) => {
                 <FormattedPrice amount={item.price} />
               </span>
             </p>
+            {/* In this section, you can remove the product from the list of favorites */}
             <div
               onClick={() => dispatch(deleteFavorite(item._id))}
               className="flex items-center text-sm font-medium text-gray-400 hover:text-red-600 cursor-pointer duration-300"
@@ -44,6 +45,7 @@ const FavoriteProduct = ({ item }: cartProductProps) => {
               <IoMdClose className="mt-[2px]" /> <p>remove</p>
             </div>
           </div>
+          {/* In this section, you can add the product to the shopping cart */}
           <Button
             onClick={() => {
               dispatch(
