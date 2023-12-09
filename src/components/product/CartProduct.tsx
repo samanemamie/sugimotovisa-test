@@ -13,6 +13,7 @@ import FormattedPrice from "@/lib/FormattedPrice";
 //
 import { LuMinus, LuPlus } from "react-icons/lu";
 import { IoMdClose } from "react-icons/io";
+import { useColorClasses } from "@/lib/hooks/useColorClasses";
 
 interface Item {
   brand: string;
@@ -100,15 +101,14 @@ const CartProduct = ({ item }: cartProductsProps) => {
           {/* In this section, you can choose the color of the product */}
           <div className="flex flex-col md:flex-row items-start gap-3 mt-2">
             {colorOptions.map((option, index) => {
+              const { bgClass, borderClass } = useColorClasses(
+                option.color,
+                item.color
+              );
               return (
                 <div
                   key={index}
-                  className={`border text-center  cursor-pointer 
-                  bg-${
-                    item.color && item.color == option.color && option.color
-                  }-400
-                  border-${option.color}-400
-                   px-4 py-1 rounded-full w-28 shadow-lg shadow-gray-300`}
+                  className={`border text-center cursor-pointer ${bgClass} ${borderClass} px-4 py-1 rounded-full w-28 shadow-lg shadow-gray-300`}
                   onClick={() =>
                     dispatch(
                       colorProduct({
