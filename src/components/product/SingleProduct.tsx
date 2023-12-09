@@ -32,7 +32,7 @@ export default function SingleProduct({ data }: Props) {
   return (
     <>
       <div className="mx-auto max-w-screen-xl px-4 md:px-8 mb-16">
-        <div className="grid gap-8 md:grid-cols-2 h-[500px] ">
+        <div className="grid gap-8 md:grid-cols-2 md:h-[500px] ">
           <div className="overflow-hidden rounded-lg bg-gray-100">
             <Image
               src={data.image}

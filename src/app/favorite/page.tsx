@@ -14,7 +14,7 @@ const FavoritePage = () => {
   const { favoriteData } = useSelector((state: StateProps) => state.next);
 
   return (
-    <div className="max-w-screen-2xl mx-auto  py-4">
+    <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-full  py-4">
       {favoriteData.length > 0 ? (
         // This section is for checking the presence or absence of data in the favorites section
         <div className="bg-white p-4 rounded-lg">

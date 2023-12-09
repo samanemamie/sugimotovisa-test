@@ -14,11 +14,11 @@ const CartPage = () => {
   const { productData } = useSelector((state: StateProps) => state.next);
 
   return (
-    <div className="max-w-screen-2xl mx-auto  py-4">
+    <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-full   py-4">
       {productData.length > 0 ? (
         //  This section is for checking the presence or absence of data in the shopping cart
         <>
-          <div className="bg-white  py-5 rounded-lg">
+          <div className="bg-white  py-5 rounded-lg px-4 xl:px-0">
             <div className="flex items-center justify-between border-b-[1px] border-b-gray-400 pb-1">
               <p className="text-2xl font-semibold text-amazon_blue">
                 Shopping Cart
@@ -30,7 +30,7 @@ const CartPage = () => {
                 Back
               </Link>
             </div>
-            <div className="pt-2 flex flex-col gap-2">
+            <div className="pt-2 flex flex-col gap-2 ">
               {productData.map((item: StoreProduct) => (
                 <div key={item._id}>
                   <CartProduct item={item} />

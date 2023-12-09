@@ -41,7 +41,7 @@ const CartProduct = ({ item }: cartProductsProps) => {
 
   const dispatch = useDispatch();
   return (
-    <div className="bg-gray-100 rounded-lg flex flex-col md:flex-row items-center gap-4 py-3">
+    <div className="bg-gray-100 rounded-lg flex flex-col md:flex-row items-center gap-4 py-3 ">
       <Image
         className="object-cover"
         width={150}
