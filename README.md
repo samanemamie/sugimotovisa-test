@@ -22,6 +22,10 @@ The project uses a fake API for data retrieval. This allows for testing and deve
 
 Due to the unavailability of an API, the product details data is obtained from the searchParams of the URL. This allows the project to retrieve and display the relevant details for the product on the product details page.
 
+Project Timeline:
+
+The project was completed from Friday, December 8, 2023, to Saturday, December 9, 2023.
+
 Getting Started:
 
 To run the project, follow these steps:
